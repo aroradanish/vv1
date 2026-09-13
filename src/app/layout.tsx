@@ -7,9 +7,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'VillaVista - Search & Book Homestays, Villas & Apartments',
+  title: 'Nivora - Search & Book Homestays, Villas & Apartments',
   description:
-    'Search and compare hundreds of homestays, luxury villas, beach houses, and cozy apartments around the world on VillaVista.',
+    'Search and compare hundreds of homestays, luxury villas, beach houses, and cozy apartments around the world on Nivora.',
   icons: { icon: '/logo1.png' },
 };
 

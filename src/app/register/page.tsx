@@ -72,7 +72,7 @@ export default function RegisterPage() {
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </div>
-            <h1 className="text-2xl font-bold">Join VillaVista</h1>
+            <h1 className="text-2xl font-bold">Join Nivora</h1>
             <p className="text-[13px] text-ink-muted max-w-[320px] mx-auto mt-1 leading-snug">
               Create an account to start booking unique homestays and luxury villas, or register as a host to list your property and start earning.
             </p>

@@ -63,7 +63,7 @@ export default function LoginPage() {
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold mb-2">Welcome back to VillaVista</h2>
+            <h2 className="text-2xl font-bold mb-2">Welcome back to Nivora</h2>
             <p className="text-[13px] text-ink-muted max-w-[300px] mx-auto leading-snug">
               Log in to access your bookings, save properties to your wishlist, and manage your stays across India&apos;s top destinations.
             </p>

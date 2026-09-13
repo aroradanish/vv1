@@ -20,9 +20,9 @@ const DESTINATIONS = [
 ];
 
 const FAQS = [
-  { q: 'How does VillaVista work?', a: 'VillaVista lets you search and compare homestays, apartments, and luxury villas across major cities and travel destinations. You can filter by price, date, and guest count to reserve stays directly.' },
+  { q: 'How does Nivora work?', a: 'Nivora lets you search and compare homestays, apartments, and luxury villas across major cities and travel destinations. You can filter by price, date, and guest count to reserve stays directly.' },
   { q: 'Can I cancel my booking for free?', a: 'Most properties offer free cancellation up to 48 hours before check-in. Specific cancellation policies are clearly detailed on each property details card before payment.' },
-  { q: 'Are reviews on VillaVista verified?', a: 'Yes! Only verified guests who have completed a stay at a property can leave ratings and reviews.' },
+  { q: 'Are reviews on Nivora verified?', a: 'Yes! Only verified guests who have completed a stay at a property can leave ratings and reviews.' },
   { q: 'How do host payouts and registration work?', a: 'Property owners can log in to the Host & Admin Dashboard to list properties, manage availability, view reservations, and set nightly rates dynamically.' },
 ];
 
@@ -364,7 +364,7 @@ export default function HomePage() {
       <section className="max-w-[900px] mx-auto my-10 px-5">
         <div className="text-center mb-7">
           <h2 className="text-[1.6rem] font-extrabold">Frequently Asked Questions</h2>
-          <p className="text-ink-muted text-sm mt-1">Everything you need to know about booking homestays on VillaVista</p>
+          <p className="text-ink-muted text-sm mt-1">Everything you need to know about booking homestays on Nivora</p>
         </div>
         <div className="flex flex-col gap-3 mt-5">
           {FAQS.map((f, i) => (

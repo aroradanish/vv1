@@ -1,5 +1,5 @@
 /**
- * Central API client for the VillaVista NestJS backend.
+ * Central API client for the Nivora NestJS backend.
  * Mirrors the data shapes of the original Supabase schema.
  */
 

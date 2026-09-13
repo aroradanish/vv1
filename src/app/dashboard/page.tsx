@@ -108,7 +108,7 @@ export default function DashboardPage() {
   const tripCard = (b: Booking, category: 'upcoming' | 'past' | 'cancelled') => {
     const prop = properties.find((p) => p.id === b.property_id);
     const exp = EXPERIENCES.find((e) => e.id === b.property_id);
-    const title = prop?.room_type || exp?.title || 'VillaVista Homestay';
+    const title = prop?.room_type || exp?.title || 'Nivora Homestay';
     const location = prop?.location || exp?.loc || 'Destination India';
     const img = prop?.images?.[0] || exp?.image || '/front.webp';
     const { label, rating: revRating, comment: revComment, isReviewed } = parseStatus(b.status);

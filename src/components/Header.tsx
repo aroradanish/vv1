@@ -56,7 +56,7 @@ export default function Header() {
       >
         <div className="p-5 border-b border-line flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 no-underline">
-            <span className="text-2xl font-extrabold text-primary tracking-tight">VillaVista</span>
+            <span className="text-2xl font-extrabold text-primary tracking-tight">Nivora</span>
             <span className="bg-primary-light text-primary text-[11px] font-bold px-1.5 py-0.5 rounded uppercase">Menu</span>
           </Link>
           <button onClick={() => setDrawerOpen(false)} aria-label="Close menu" className="text-ink-muted text-xl">
@@ -98,7 +98,7 @@ export default function Header() {
             ☰
           </button>
           <Link href="/" className="flex items-center gap-2 no-underline">
-            <span className="text-2xl font-extrabold text-primary tracking-tight">VillaVista</span>
+            <span className="text-2xl font-extrabold text-primary tracking-tight">Nivora</span>
             <span className="bg-primary-light text-primary text-[11px] font-bold px-1.5 py-0.5 rounded uppercase">
               {isHost ? 'Host' : 'Home'}
             </span>
@@ -163,7 +163,7 @@ export default function Header() {
             <h2 className="text-primary font-extrabold mb-4 text-2xl">Developed By</h2>
             <p className="font-bold text-lg">Dnish Arora</p>
             <hr className="my-5 border-line" />
-            <p className="text-[13px] text-ink-muted">VillaVista Homestay Rental Platform · 2026</p>
+            <p className="text-[13px] text-ink-muted">Nivora Homestay Rental Platform · 2026</p>
           </div>
         </div>
       )}
