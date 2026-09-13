@@ -114,9 +114,9 @@ export default function HomePage() {
               Where will your <br />
               <span className="text-primary-light">next stay be?</span>
             </h1>
-            <p className="text-white/90 text-lg font-medium max-w-[500px] drop-shadow-md">
+            {/* <p className="text-white/90 text-lg font-medium max-w-[500px] drop-shadow-md">
               Discover unique homestays and luxury villas across India's most breathtaking destinations.
-            </p>
+            </p> */}
           </div>
 
           <div className="flex gap-3 mb-6 overflow-x-auto pb-2 hide-scrollbar">
