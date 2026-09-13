@@ -8,6 +8,7 @@ import { api, Booking, Property } from '@/lib/api';
 import { useAuth } from '@/lib/auth-context';
 import { parseStatus, rupees, statusBadgeClass, todayStr } from '@/lib/utils';
 import LeafletMap from '@/components/LeafletMap';
+import ChatModal from '@/components/ChatModal';
 
 const AMENITIES = [
   ['WiFi', '🌐 WiFi'], ['AC', '❄️ AC'], ['TV', '📺 TV'], ['Kitchen', '🍳 Kitchen'],
@@ -48,6 +49,7 @@ export default function HostPage() {
   // Edit state
   const [editing, setEditing] = useState<Property | null>(null);
   const [editAmenities, setEditAmenities] = useState<string[]>([]);
+  const [chatFor, setChatFor] = useState<Booking | null>(null);
 
   // Auth guard (hosts only)
   useEffect(() => {
@@ -488,6 +490,14 @@ export default function HostPage() {
           </div>
         </div>
       )}
+
+      {chatFor && (
+        <ChatModal
+          bookingId={chatFor.id}
+          title={chatFor.profiles?.full_name || 'Guest Interaction'}
+          onClose={() => setChatFor(null)}
+        />
+      )}
     </>
   );
 
@@ -509,6 +519,14 @@ export default function HostPage() {
         </div>
         <div className="flex flex-col items-end gap-2.5">
           <span className={`inline-block px-2.5 py-1 rounded-xl font-bold text-[11px] uppercase ${badgeClass}`}>{label}</span>
+          {(label === 'confirmed' || label === 'approved') && (
+            <button
+              onClick={() => setChatFor(b)}
+              className="px-3 py-2 text-xs rounded-lg border-none font-bold bg-primary text-white hover:brightness-110 flex items-center gap-2"
+            >
+              💬 Chat with Guest
+            </button>
+          )}
           {showActions && (
             <div className="flex gap-2.5">
               <button onClick={() => setBookingStatus(b.id, 'approved')} className="px-3 py-2 text-xs rounded-lg border-none font-bold bg-[#2e7d32] text-white">Approve</button>

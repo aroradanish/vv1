@@ -7,6 +7,7 @@ import { api, Booking, Property } from '@/lib/api';
 import { useAuth } from '@/lib/auth-context';
 import { parseStatus, rupees, statusBadgeClass } from '@/lib/utils';
 import LeafletMap from '@/components/LeafletMap';
+import ChatModal from '@/components/ChatModal';
 
 const EXPERIENCES = [
   { id: 'exp1', title: 'North Goa Surf Session', image: '/images/destination_goa.jpg', loc: 'Goa' },
@@ -30,6 +31,7 @@ export default function DashboardPage() {
   const [comment, setComment] = useState('');
   const [loadingData, setLoadingData] = useState(true);
   const [mapFor, setMapFor] = useState<string | null>(null);
+  const [chatFor, setChatFor] = useState<Booking | null>(null);
 
   // Auth guard
   useEffect(() => {
@@ -138,6 +140,14 @@ export default function DashboardPage() {
           <div className="flex md:flex-col justify-center gap-2.5 md:min-w-[150px]">
             {category === 'upcoming' && (
               <button onClick={() => cancelBooking(b.id)} className="px-4 py-2.5 rounded-lg border-none font-bold text-[13px] bg-[#ffebee] text-[#c62828] hover:!bg-[#c62828] hover:text-white transition-all">Cancel Trip</button>
+            )}
+            {(label === 'confirmed' || label === 'approved') && (
+              <button
+                onClick={() => setChatFor(b)}
+                className="px-4 py-2.5 rounded-lg border-none font-bold text-[13px] bg-primary-light text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+              >
+                <span>💬 Interact</span>
+              </button>
             )}
             {category === 'past' && isReviewed && (
               <div className="text-xs text-[#777] mb-1">
@@ -281,6 +291,14 @@ export default function DashboardPage() {
             <button onClick={submitReview} className="btn-primary w-full py-4 rounded-xl text-base font-extrabold">Submit Review</button>
           </div>
         </div>
+      )}
+
+      {chatFor && (
+        <ChatModal
+          bookingId={chatFor.id}
+          title={properties.find(p => p.id === chatFor.property_id)?.room_type || 'Host Interaction'}
+          onClose={() => setChatFor(null)}
+        />
       )}
     </div>
   );

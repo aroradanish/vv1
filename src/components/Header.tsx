@@ -161,8 +161,7 @@ export default function Header() {
           >
             <button className="absolute top-4 right-5 text-2xl cursor-pointer text-ink-muted" onClick={() => setDevModal(false)}>×</button>
             <h2 className="text-primary font-extrabold mb-4 text-2xl">Developed By</h2>
-            <p className="mb-3 font-bold text-lg">Danish Arora - 24BCE1714</p>
-            <p className="font-bold text-lg">Atreyi Dey - 24BCE1653</p>
+            <p className="font-bold text-lg">Dnish Arora</p>
             <hr className="my-5 border-line" />
             <p className="text-[13px] text-ink-muted">VillaVista Homestay Rental Platform · 2026</p>
           </div>

@@ -57,6 +57,24 @@ export interface Experience {
   badge?: string;
 }
 
+export interface Itinerary {
+  id: string;
+  user_id: string;
+  location: string;
+  vibe: string;
+  content: string;
+  estimated_cost: string;
+  created_at: string;
+}
+
+export interface Message {
+  id: string;
+  booking_id: string;
+  sender_id: string;
+  content: string;
+  created_at: string;
+}
+
 export class ApiError extends Error {
   status: number;
   constructor(status: number, message: string) {
@@ -149,4 +167,9 @@ export const api = {
   // ---- itineraries ----
   saveItinerary: (dto: { location: string; vibe: string; content: string; estimated_cost: string }) =>
     request<{ success: boolean }>('/itineraries', { method: 'POST', body: JSON.stringify(dto) }),
+
+  // ---- chat ----
+  getMessages: (bookingId: string) => request<Message[]>(`/chat/${bookingId}`),
+  sendMessage: (bookingId: string, content: string) =>
+    request<Message>(`/chat/${bookingId}`, { method: 'POST', body: JSON.stringify({ content }) }),
 };

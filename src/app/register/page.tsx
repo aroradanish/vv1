@@ -51,6 +51,18 @@ export default function RegisterPage() {
 
   return (
     <div className="auth-bg min-h-screen flex items-center justify-center p-7 overflow-hidden relative">
+      {/* Home Button */}
+      <Link
+        href="/"
+        className="absolute top-8 left-8 z-20 w-11 h-11 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all shadow-lg"
+        title="Go to Home"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      </Link>
+
       <div className="w-full max-w-[420px] relative z-10">
         <div className="glass-card rounded-[35px] px-8 py-7 shadow-xl dark:shadow-none transition-all hover:-translate-y-1 relative">
           <div className="text-center mb-5">
